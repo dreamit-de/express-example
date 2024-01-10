@@ -1,5 +1,5 @@
 name: Install and compile express-example
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   expressexample:
