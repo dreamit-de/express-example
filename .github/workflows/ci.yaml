@@ -5,4 +5,4 @@ jobs:
   expressexample:
     uses: dreamit-de/workflows/.github/workflows/nodejs-ci.yml@main
     with:
-      only-latest-lts: true
+      last-lts: ''
