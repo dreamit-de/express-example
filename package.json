@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@dreamit/graphql-server": "4.8.0",
-    "express": "4.18.3",
+    "express": "4.19.1",
     "graphql": "16.8.1"
   }
 }
