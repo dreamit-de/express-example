@@ -26,7 +26,7 @@ const graphQLServerExpress = express()
 graphQLServerExpress.use(bodyParser.text({type: '*/*'}))
 graphQLServerExpress.all('/graphql', 
     (request: GraphQLServerRequest, response: GraphQLServerResponse) => {
-        return graphqlServer.handleRequest(request, response)
+        graphqlServer.handleRequest(request, response)
     })
 graphQLServerExpress.listen({port: graphQLServerPort})
 console.info(`Starting GraphQL server on port ${graphQLServerPort}`)
