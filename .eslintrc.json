@@ -30,7 +30,15 @@
     "rules": {
         "@typescript-eslint/class-literal-property-style": "error",
         "@typescript-eslint/consistent-indexed-object-style": "error",
-        "@typescript-eslint/naming-convention": "error",
+        "@typescript-eslint/naming-convention": ["error",
+        {
+            "selector": "property",
+            "format": ["strictCamelCase"],
+            "filter": {
+              "regex": "^(Content-Type)$",
+              "match": false
+            }
+          }],
         "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
         "@typescript-eslint/explicit-function-return-type": "error",
         "@typescript-eslint/no-confusing-non-null-assertion": "error",

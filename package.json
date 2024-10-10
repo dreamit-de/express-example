@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Example NodeJS app using Express.js",
   "main": "build/index.js",
+  "type": "module",
   "scripts": {
     "build": "esbuild ./src/StartServer.ts --bundle --minify --platform=node --target=node20 --outfile=./build/StartServer.cjs",
-    "lint": "eslint src/*.ts src/**/*.ts",
+    "lint": "eslint src/*.ts src/**/*.ts tests/**/*.ts",
     "start": "npm run build && node build/StartServer.cjs",
     "check": "tsc --noEmit --pretty",
-    "test": "echo 'Not defined in this project'"
+    "test": "node --experimental-test-coverage --import tsx --test tests/index.test.ts"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "eslint-plugin-deprecation": "3.0.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-unicorn": "56.0.0",
+    "tsx": "^4.19.1",
     "typescript": "5.6.3",
     "typescript-eslint": "8.8.1"
   },
